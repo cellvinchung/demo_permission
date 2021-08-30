@@ -50,7 +50,7 @@ class ApplicationPolicy
   end
 
   def permissions
-    @permissions ||= @user.group_permissions.includes(:permission_resource)
+    @permissions ||= @user.enabled_permissions.includes(:permission_resource)
   end
 
   class Scope
