@@ -15,7 +15,6 @@ class GroupPermission < ApplicationRecord
   private
 
   def setup_priority
-    Rails.logger.warn "--------------- #{permission_resource.default_priority}"
     self.priority = permission_resource.default_priority if priority.nil?
   end
 end

@@ -12,7 +12,7 @@
 
   <body class="container">
     <% flash.each do |type, message|%>
-    <div class="alert alert-danger"><%= message%></div>
+    <div class="alert alert-warning"><%= message%></div>
     <% end %>
     <%= render partial: 'common/header'%>
     <%= yield %>
