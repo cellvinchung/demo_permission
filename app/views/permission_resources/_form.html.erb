@@ -1,0 +1,7 @@
+<%= form_for(permission_resource, html: { class: 'my-3' }) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :priority %>
+  <%= f.select :default_priority, collection: PermissionResource.default_priorities.keys %>
+  <%= f.submit%>
+<% end %>

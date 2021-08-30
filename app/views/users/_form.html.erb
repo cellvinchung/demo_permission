@@ -1,0 +1,13 @@
+<%= form_for(user, html: { class: 'my-3' }) do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <% if user.new_record? %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  <% end %>
+  <%= f.label :user_group_id %>
+  <%= f.select :user_group_id, collection: UserGroup.all.pluck(:name, :id) %>
+  <%= f.submit %>
+<% end %>

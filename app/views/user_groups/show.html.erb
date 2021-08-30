@@ -1,0 +1,17 @@
+<%= link_to 'edit', edit_user_group_path(user_group), class: 'btn btn-primary' if policy(user_group).edit?%>
+<dl class="row my-3">
+  <dt class="col-sm-3">Name</dt>
+  <dd class="col-sm-9"><%= user_group.name %></dd>
+
+  <dt class="col-sm-3">Super Admin</dt>
+  <dd class="col-sm-9">
+    <%= user_group.super_admin %>
+  </dd>
+
+  <% user_group.group_permissions.each do |group_permission|%>
+  <dt class="col-sm-3"><%= group_permission.permission_resource.name %></dt>
+  <dd class="col-sm-9">
+    <%= group_permission.priority %>
+  </dd>
+  <% end %>
+</dl>

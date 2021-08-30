@@ -1,0 +1,12 @@
+<%= link_to 'New', new_permission_resource_path, class: 'btn btn-primary' if policy(@permission_resources).new?%>
+<table class="my-3 table table-stripped">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>default_priority</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @permission_resources%>
+  </tbody>
+</table>
