@@ -20,3 +20,5 @@ start
 ```
 
 See db/seed.rb for init datas.
+
+[Presentation note](https://hackmd.io/@cellvinchung/B1rAU2KbK)
